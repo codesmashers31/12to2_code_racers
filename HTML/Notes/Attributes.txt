@@ -1,0 +1,232 @@
+
+
+
+1. What are Attributes?
+
+
+Definition: Provide extra information to HTML tags to influence behavior, display, and interaction.
+
+
+Purpose: Enable communication between HTML, CSS, JS, and frameworks/tools like Bootstrap and Tailwind.
+
+
+Syntax:
+
+
+
+
+xml
+
+<tagname attributename="value">Content</tagname>
+
+
+
+
+Example:
+
+
+
+
+xml
+
+<h1 class="heading primary">My Title</h1>
+
+
+
+
+
+
+2. Types of Attributes
+
+
+Type
+	Description
+	Common Examples
+
+Global
+	Can be used on any HTML element
+	class, id, style, title, lang, hidden
+
+Local
+	Used with specific tags only
+	src, href, alt, value, type, for, placeholder, width, height, name
+
+
+
+
+Why important?
+
+
+Without attributes, HTML is static and has no interaction or styling hooks.
+
+
+
+
+
+3. Key Attributes & Usage
+
+
+class
+
+
+Not unique—assignable to multiple elements.
+
+
+Use for styling (CSS, Bootstrap, Tailwind).
+
+
+Supports multiple class values (space-separated).
+
+
+
+
+xml
+
+<div class="alert alert-success">Success</div>
+
+
+
+
+Changes appearance only, no JS functionality by default.
+
+
+id
+
+
+Unique for single element in the document.
+
+
+Used for JS targeting and specific CSS rules.
+
+
+
+
+xml
+
+<input id="user-email" type="email" />
+
+
+
+
+Only one use per value allowed per page!
+
+
+Local Attribute Examples
+
+
+<img src="logo.png" alt="Company Logo" width="100" />
+
+
+<a href="https://example.com" title="Visit Example">Visit</a>
+
+
+<input type="text" placeholder="Enter your name" />
+
+
+Used for tag-specific behaviors (image source, link destination, tooltip, form data etc.)
+
+
+
+
+
+4. Attribute-Driven Interaction
+
+
+CSS/JS/Frameworks: Use class and id to select, style, and manipulate elements.
+
+
+Attributes link HTML with styles (CSS) and scripts (JS) for dynamic, interactive, and responsive web pages.
+
+
+
+
+
+5. Common Interview Tasks & Questions
+
+
+Why use class instead of id (and vice versa)?
+
+
+Show an example of using id for JavaScript manipulation.
+
+
+How do Bootstrap or Tailwind use attributes for styling?
+
+
+What’s the difference between global and local attributes?
+
+
+Explain “attribute-value pair” with code.
+
+
+
+
+
+6. Quick Tasks for Practice
+
+
+Make two paragraphs same style using a class, but with different IDs for JS.
+
+
+Add an image with:
+
+
+src, alt, width, and a class for border.
+
+
+Create a form with an <input> using type, placeholder, name, and a unique id. Bind a label using for.
+
+
+
+
+
+
+
+
+7. Experiment/Practical Task
+
+a. Styling with class and id
+
+
+
+
+
+
+
+xml
+
+<style>
+  .highlight { background: yellow; }
+  #special { color: red; }
+</style>
+<p class="highlight">Paragraph One</p>
+<p class="highlight" id="special">Paragraph Two</p>
+
+
+
+
+Try: Select #special with JS to change its text via a button.
+
+
+b. Bootstrap Button Example:
+
+
+Try: Add onclick JS to alert button ID.
+
+
+
+
+
+8. Essential Points
+
+
+Use class for repeated styling and id for unique behaviors.
+
+
+Frameworks heavily utilize class (Bootstrap, Tailwind).
+
+
+id is your bridge to JavaScript.
+
+
+
