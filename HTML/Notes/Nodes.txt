@@ -230,3 +230,65 @@ id is your bridge to JavaScript.
 
 
 
+
+
+
+
+17.09.2025:
+Form
+The <form> element is a container used to collect input from users, grouping various input fields, buttons, and labels into a single section for data submission.
+
+It helps organize the way different fields work together to collect data for processing.
+
+Label
+The <label> element provides a descriptive title for an input field, helping users understand what kind of data is expected.
+
+Clicking on a label will focus or activate the connected input, improving accessibility, especially for screen readers and users with mobility challenges.
+
+Use the for attribute in <label> with the ID of the input to link them, or wrap the <input> inside the <label> as an alternative.
+
+Input
+The <input> element is the main way to collect user data in a form—it creates fields like text boxes, checkboxes, radio buttons, or file selectors.
+
+The appearance and data type expected depend on the type attribute you set.
+
+type Attribute
+type defines what kind of information the input expects, such as text for standard input, email for email addresses, number for numbers, etc.
+
+This tells both the browser and developer how to interpret or validate the input.
+
+name
+The name attribute identifies the input, so when the form is submitted, the data sent has a name-value pair.
+
+It is required for server-side processing and data collection.
+
+value
+Sets a default value for the input field or represents the current value entered by the user.
+
+Useful for pre-filling forms or controlling what data is sent on submission.
+
+hidden
+The hidden attribute makes an input invisible to users but still sends its value with the form.
+
+It is used for storing extra data, like tokens or IDs, that the user should not see or modify.
+
+readonly
+The readonly attribute displays the input data but prevents the user from changing it.
+
+Often used when you want the user to see a field’s value for reference but not edit it.
+
+disabled
+The disabled attribute greys out the input and blocks all interaction.
+
+A disabled input cannot be edited or submitted with the form.
+
+placeholder
+The placeholder attribute shows greyed-out hint text inside an input box until the user starts typing.
+
+It gives a clue about what to enter, improving usability.
+
+required
+Makes sure the field must be filled before submitting the form.
+
+The browser will warn the user if they try to submit an incomplete required field.
+
