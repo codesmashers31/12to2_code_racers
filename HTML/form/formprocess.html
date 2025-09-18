@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <center>
+      <h1>Enter the Leo World</h1>
+      <img src="assets/img/1.jpg" alt="Welcome imgaes" />
+    </center>
+    <p>Read the instractions and fill the form</p>
+    <ul>
+      <li>Must be single.</li>
+      <li>Must Use Guns and weapons</li>
+      <li>Above 18+ age Only</li>
+      <li>Atleast 2 Kills Required</li>
+      <li>Must Know Politice</li>
+      <li>Ready To die</li>
+    </ul>
+
+    <center>
+      <form action="leofactory.html" method="get">
+        <label>Enter the Name: </label>
+        <input type="text" placeholder="Enter Capitaize"  />
+        <br /><br />
+        <label>Enter the Email: </label>
+        <input type="email" placeholder="example@gmail.com" />
+<br /><br />
+      <label>Enter the Mobile: </label>
+        <input type="tel" placeholder="Must 10 digit" maxlength="10" minlength="10" />
+        <br /><br />
+       <label>Enter the Address: </label>
+        <textarea required></textarea>
+        <br /><br />
+      <label>Enter the DoB: </label>
+        <input type="datetime-local" />
+
+         <br /><br />
+      <label>Enter the weapons: </label>
+        <select>
+            <option value="" selected disabled>Choose One weapons..</option>
+            <option value="guns">Guns</option>
+            <option value="knife">knife</option>
+            <option value="swords">swords</option>
+            <option value="traps">Traps</option>
+        </select>
+
+        <br><br>
+        <label>Enter the Gender: </label>
+        <input type="radio" name="gender" >Male
+        <input type="radio" name="gender" >Female
+        <br><br>
+         <label>Enter the Skills: </label>
+        <input type="checkbox" name="skills" >Fights
+        <input type="checkbox" name="skills" >Gun Hnadling
+        <input type="checkbox" name="skills" >Traps Using
+        <input type="checkbox" name="skills" >Drags Using
+
+        <br><br>
+        <label>Enter the Fevoire Car: </label>
+        <input type="color" />
+
+          <br><br>
+        <label>Upload You imgae: </label>
+        <input type="file" />
+
+          <br><br>
+        <label>Upload Your Resume: </label>
+        <input type="file" accept=".pdf,.jpg" />
+       
+            <br><br>
+        <label>Range: </label>
+        <input type="range" />
+   <br><br>
+        <input type="submit" value="Register">
+ <input type="reset" value="Reset">
+
+
+      </form>
+    </center>
+  </body>
+</html>
