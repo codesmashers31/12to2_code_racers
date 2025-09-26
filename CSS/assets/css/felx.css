@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    padding: 20px;
+    background-color: rgb(6, 6, 6);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nav{
+    
+    display: flex;
+    gap: 20px;
+
+}
+
+
+.nav a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo{
+    color: white;
+}
+
+
+.parent-box{
+    
+    background-color: aqua;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.box{
+
+      background-color: black;
+      color: white;
+      padding: 20px;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}

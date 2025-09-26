@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    padding: 20px;
+    background-color: rgb(6, 6, 6);
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.nav{
+    
+    display: flex;
+    gap: 20px;
+
+}
+
+
+.nav a{
+
+    text-decoration: none;
+    color: white;
+
+}
+
+.logo{
+    color: white;
+}
+
+
+.cards{
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    
+}
+
+.child-cards{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.child-cards img{
+   
+    width: 120px;
+   
+}
