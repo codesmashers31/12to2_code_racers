@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Grid Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 200px auto; /* sidebar + main */
+      grid-template-rows: 60px auto;     /* header + content */
+      height: 100vh;
+    }
+
+    .header {
+      grid-column: 1 / span 2; /* spans across both columns */
+      grid-row: 1;
+      background: #3f51b5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .sidebar {
+      grid-column: 1;
+      grid-row: 2;
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+      background: #ddd;
+    }
+
+    .main {
+      grid-column: 2;
+      grid-row: 2;
+      background: #fff;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">My Dashboard</div>
+      <div class="nav">
+        <a href="#" style="color:white; text-decoration:none; margin-left:20px;">Profile</a>
+        <a href="#" style="color:white; text-decoration:none; margin-left:20px;">Settings</a>
+        <a href="#" style="color:white; text-decoration:none; margin-left:20px;">Logout</a>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <a href="#">Home</a>
+      <a href="#">Users</a>
+      <a href="#">Reports</a>
+      <a href="#">Analytics</a>
+    </div>
+
+    <div class="main">
+      <h2>Welcome to the Dashboard</h2>
+      <p>This is the main content area.</p>
+      <p>You can add cards, graphs, or data tables here.</p>
+    </div>
+  </div>
+</body>
+</html>
