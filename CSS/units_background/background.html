@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background + Center Box</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("https://picsum.photos/1200/800");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .box {
+      background: #b9cef0; /* semi-transparent white */
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .box h1 {
+      font-size: 2rem; /* uses rem */
+      margin-bottom: 20px;
+    }
+
+    .box p {
+      font-size: 1em; /* depends on parent font */
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Welcome!</h1>
+    <p>This text is centered over a background image.</p>
+  </div>
+</body>
+</html>

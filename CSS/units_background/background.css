@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.back{
+    /* background-image: url('../assets/imgs/1.avif');
+    height: 300px;
+    width: 250px;
+    background-repeat: no-repeat; */
+    
+    background: red 
+    
+}
