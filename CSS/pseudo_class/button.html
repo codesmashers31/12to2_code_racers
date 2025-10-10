@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pseudo + Media + Transition Example</title>
+<style>
+body {
+  font-family: Arial;
+  background: #fafafa;
+  margin: 0;
+  text-align: center;
+}
+
+h1::before { content: "🎨 "; }
+h1::after { content: " 💻"; }
+
+button {
+  background: #3f51b5;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+button:hover {
+  background: #283593;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    background: lightcoral;
+  }
+  button {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Batch 2 - CSS Advanced</h1>
+<button>Hover & Resize Window</button>
+
+</body>
+</html>

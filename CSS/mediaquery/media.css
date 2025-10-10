@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+}
+
+.box{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+
+.parent{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width:768px) {
+
+   .box{
+    background-color: rgb(251, 79, 48);
+   }
+    
+}
+
+@media (max-width:600px) {
+
+   .box{
+    background-color: aquamarine;
+   }
+    
+}
+
+
+@media (max-width:400px) {
+
+   .box{
+    background-color: rgb(1, 17, 12);
+    display: none;
+   }
+    
+}
