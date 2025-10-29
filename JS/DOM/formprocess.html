@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <input type="text"  id="inputdatas">
+    <button id="btn">Generate</button>
+    <p id="result"></p>
+    <img src="" id="images" alt="">
+
+
+
+
+    <script>
+        const btn_1 = document.getElementById("btn")
+
+        btn_1.addEventListener('click',(e)=>{
+            const  datas = document.getElementById("inputdatas").value
+            const images_1 = document.getElementById("images")
+            const result_data = document.getElementById("result")
+            result_data.textContent = `Your Search Result: ${datas}`
+      if(datas==="ajith"){
+         images_1.src = "ajith.jpg" 
+      }
+      else {
+         result_data.textContent = `Your Search Dats : ${datas} is not found`
+         images_1.src = "" 
+      }
+            
+
+        })
+    </script>
+</body>
+</html>
