@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM INTRO</title>
+</head>
+<body>
+
+  <div id="box" style="background-color: black;color: white;padding: 10px;">
+   <h1 id="text">This is Tea Shop</h1>
+  </div>
+
+
+  <div id="boxhide" style="background-color: black;color: white;width: 200px;height: 200px;padding: 5px;border-radius: 6px; margin-top: 20px;">
+    <h1>This is my box</h1>
+  </div>
+  <button id="hidebutton" style="background-color: blue;display: block; color:white;margin-top: 10px;">Hide</button>
+
+  <button id="btn" style="background-color: blue; color:white;margin-top: 10px;">Click to change</button>
+
+
+
+
+    <script>
+        
+        let boxdata = document.getElementById("box")
+        let heading = document.getElementById("text")
+        let buttondata = document.getElementById("btn")
+
+        buttondata.addEventListener("click",()=>{
+          boxdata.style.backgroundColor = "blue"
+          boxdata.style.color = "white"
+          heading.innerHTML = "Welcome to Amman tea Shop"
+        })
+
+
+
+
+        let boxhide1 = document.getElementById("boxhide")
+        let bnthide1 = document.getElementById("hidebutton")
+       
+bnthide1.addEventListener("click",()=>{
+if(boxhide1.style.display === "block"){
+  boxhide1.style.display = "none"
+  bnthide1.innerText = "Show"
+}else{
+    boxhide1.style.display = "block"
+    bnthide1.innerText = "Hide"
+}
+  
+
+})
+        
+    </script>
+</body>
+</html>
