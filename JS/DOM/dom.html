@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="myform">  
+        <label>
+            Enter Your Name </label>
+        <input type="text" id="username">
+        <label>Enter Email</label>
+        <input type="email" id="useremail">
+        <button type="submit">Register</button>
+        <p id="paragraph"></p>
+    </form>
+
+    <script>
+        const form =document.getElementById("myform")
+        const paragraph = document.getElementById("paragraph")
+
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+        const name = document.getElementById("username").value
+        const email = document.getElementById("useremail").value
+        //alert(`Name: ${name} and Email: ${email}`)
+         console.log(name.length);
+         
+        if(name===""){
+
+           paragraph.innerText = "Enter the Empty Feild"
+           paragraph.style.color="red"
+           return
+        }
+        else if(email === ""){
+
+            paragraph.innerText = "Enter the Empty Feild"
+            paragraph.style.color ="red"
+
+        }else if(name.length <= 10){
+
+            paragraph.innerText = "Must Enter 10 Charactar"
+            paragraph.style.color ="red"
+
+        }else{
+             paragraph.innerText = "Welcome"
+            paragraph.style.color ="green"
+        }
+  
+    })
+
+    </script>
+
+</body>
+
+</html>
