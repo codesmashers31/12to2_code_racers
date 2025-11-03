@@ -6,32 +6,82 @@
     <title>HTML</title>
 </head>
 <body>
-    <input type="text"  id="inputdatas">
-    <button id="btn">Generate</button>
+
+<form  id="myform">
+    <input type="text" placeholder="Enter the name"  id="username">
+    <input type="number" placeholder="Enter the mobile"  id="mobile">
+    <input type="number" placeholder="Enter the age"  id="age">
+    <input type="email" placeholder="Enter the email"  id="email">
+    <input type="password" placeholder="Enter the password"  id="password">
+
+    <input type="radio" placeholder="Enter the name" name="gender"   id="male"> male
+    <input type="radio" placeholder="Enter the name" name="gender"   id="female"> Female
+
+    <textarea  id="address"></textarea>
+    <input type="submit" value="Register">
+
     <p id="result"></p>
-    <img src="" id="images" alt="">
+</form>
+
+
+
+
 
 
 
 
     <script>
-        const btn_1 = document.getElementById("btn")
 
-        btn_1.addEventListener('click',(e)=>{
-            const  datas = document.getElementById("inputdatas").value
-            const images_1 = document.getElementById("images")
-            const result_data = document.getElementById("result")
-            result_data.textContent = `Your Search Result: ${datas}`
-      if(datas==="ajith"){
-         images_1.src = "ajith.jpg" 
-      }
-      else {
-         result_data.textContent = `Your Search Dats : ${datas} is not found`
-         images_1.src = "" 
-      }
+        // const add = (...a)=>{
+
+        //     console.log(a);
             
 
-        })
+        // }
+
+        // let input = [1,2,3,4,5]
+        // add(...input,2,3,4,5)
+
+
+
+    const form = document.getElementById("myform")
+    const result = document.getElementById("result")
+
+   form.addEventListener("submit",(e)=>{
+    //alert('yES ')
+    e.preventDefault()
+    const username = document.getElementById("username").value
+    const mobile = document.getElementById("mobile").value
+    const age = document.getElementById("age").value
+    const email = document.getElementById("email").value
+    const password = document.getElementById("password").value
+    const male = document.getElementById("male").value
+    const female = document.getElementById("female").value
+    const address = document.getElementById("address").value
+   
+
+    if(!username || !mobile || !age || !email || !password || !male || !female || !address){
+          result.innerText = "Enter the Empty Feild"
+          result.style.color = "red"
+          return
+    }
+
+    if(mobile.length !== 10){
+        result.innerText = "Enter the valid 10 digit mobile number"
+          result.style.color = "red"
+          return
+    }
+  
+    alert("succfully done")
+    form.reset()
+    
+    const arr = [{username,mobile,age,email,password,address,male,female}]
+    //console.log(arr);
+  
+    
+    
+   })
+
     </script>
 </body>
 </html>
