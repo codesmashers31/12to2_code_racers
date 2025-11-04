@@ -1,0 +1,144 @@
+<script>
+    // const makeTea = (customerName,process)=>{
+
+    //     console.log(`Order received for ${customerName}`);
+
+    //     setTimeout(()=>{
+
+    //         console.log("Tea is ready");
+
+    //         process();
+
+    //     },3000)
+
+    
+    // }
+
+
+    // const serveTea= ()=>{
+
+    //     console.log(`Serving Tea`);
+        
+
+    // }
+    
+
+
+// makeTea("Priya",serveTea)
+
+
+
+
+// const makeTea = ()=>{
+
+
+//     // Promise((r,r)=>{})
+
+// return new Promise((resolve,reject)=>{
+
+//     console.log('Making Tea');
+//     setTimeout(()=>{
+       
+//     let teaready = true;
+
+
+//     if(teaready){
+//         resolve("Tea is read")
+//     }else{
+//         reject('Gas is over')
+//     }
+
+//     },2000)
+    
+
+// })
+
+
+// }
+
+
+
+// const customr = ()=>{
+
+
+//     // Promise((r,r)=>{})
+
+// return new Promise((resolve,reject)=>{
+
+
+//     setTimeout(()=>{
+//        console.log('Tea served to custer');
+//        resolve("Cusmer happy")
+
+//     },1000)
+    
+
+// })
+
+
+// }
+
+// makeTea().then((message)=>{
+//    console.log(message);
+//    console.log("Serving tea");
+   
+   
+// }).catch((error)=>{
+
+
+//     console.log("Error",error);
+    
+
+// })
+
+// Step 1: Function to make tea (returns a Promise)
+function makeTea() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Tea is ready ☕");
+      resolve("Tea done");
+    }, 2000);
+  });
+}
+
+// Step 2: Function to serve tea
+function serveTea() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Tea served to customer 🍵");
+      resolve("Tea served successfully");
+    }, 1500);
+  });
+}
+
+// Step 3: Function when customer becomes happy
+function customerHappy() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Customer is happy 😄");
+      resolve("Customer satisfied");
+    }, 1000);
+  });
+}
+
+// Step 4: Promise chaining
+makeTea()
+  .then((msg) => {
+    console.log("Step 1 Done:", msg);
+    return serveTea(); // returns next promise
+  })
+  .then((msg2) => {
+    console.log("Step 2 Done:", msg2);
+    return customerHappy(); // returns next promise
+  })
+  .then((msg3) => {
+    console.log("Step 3 Done:", msg3);
+    console.log("All process done ✅");
+  })
+  .catch((err) => {
+    console.log("Error:", err);
+  });
+
+
+
+</script>
