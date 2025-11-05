@@ -1,0 +1,61 @@
+<script>
+//     const makeTea = ()=>{
+//         return new Promise((resolve,reject)=>{
+//             setTimeout(()=>{
+//                  resolve("Tea ready")
+//             },2000)
+//         })
+//     }
+
+
+// const dats = makeTea()
+// .then((msg)=>{
+//     console.log(msg)
+    
+// }).catch((error)=>{
+
+//     console.log(error);
+
+// })
+
+// console.log(dats);
+
+
+// const maketea = async function(){
+
+// }
+
+
+// async function maketea(){
+
+// }
+
+
+const makeTea = async() =>{
+
+ 
+
+         console.log('Making tea');
+   
+
+}
+
+const prepare = async()=>{
+    try{
+    console.log('Water is boling');
+    const tea = await makeTea();
+    //console.log('error',tea);
+    console.log('Serving tea');
+    }catch(error){
+
+        console.log(error);
+        
+
+    }finally {
+        console.log("Done");
+    }
+      
+}
+
+prepare()
+</script>
