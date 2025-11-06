@@ -1,0 +1,75 @@
+<script>
+
+// const maketea = ()=>{
+//    console.log('i want tea');
+   
+//                 setTimeout(()=>{
+
+//                 let iswater = true;
+
+//                 if(iswater){
+//                     console.log('water is ready')
+
+//                 }else{
+//                     console.log("Water not ready")
+//                 }
+
+//             },3000)
+
+
+// console.log('Tea is ready');
+// }
+
+
+// maketea()
+
+
+    const maketea = ()=>{
+        
+        
+        
+
+        return new Promise((resolve,reject)=>{
+
+            setTimeout(()=>{
+
+                let iswater = true;
+
+                if(iswater){
+                    resolve('water is ready')
+
+                }else{
+                    reject("Water not ready")
+                }
+
+            },3000)
+
+
+
+
+        })
+
+        console.log('Ready tea');
+    }
+
+   const heattea = async()=>{
+
+    try{
+
+        console.log('Need tea');
+        const water = await maketea();
+        console.log(water);
+        console.log("Server a tea");
+        
+
+    }catch(error){
+
+        console.log('Something went wrong',error);
+        
+
+    }
+
+   }
+
+   heattea()
+</script>

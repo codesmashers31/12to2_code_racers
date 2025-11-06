@@ -1,0 +1,43 @@
+<script>
+//     console.log('This is start');
+    
+//    const res = fetch("https://dummyjson.com/products")
+//    //console.log(res);
+//    .then((res)=>res.json())
+//     //console.log(res);
+//     .then((data)=>console.log(data)).catch((err)=>console.log("Error",err))
+    
+    
+//    console.log("this is end");
+
+
+const getdata = async()=>{
+
+    try{
+
+        console.log('Fetching datas');
+
+        const res = await fetch("https://dummyjson.com/products")
+        const data = await res.json()
+        console.log(data.products);
+        
+
+    }catch(err){
+
+        console.error('Somethng error',err);
+        
+
+    }finally{
+        console.log('process compelted');
+        
+    }
+
+} 
+
+
+getdata()
+
+
+   
+   
+</script>

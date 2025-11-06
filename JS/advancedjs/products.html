@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product cards</title>
+</head>
+<body>
+    
+<h2>Products List</h2>
+<div id="pro">
+
+</div>
+
+<script>
+    const getdata = async()=>{
+
+    try{
+
+        console.log('Fetching datas');
+
+        const res = await fetch("https://dummyjson.com/products?limit=10")
+        console.log(res);
+        
+        const data = await res.json()
+        //console.log(data.products);
+        const datas = data.products;
+        const container = document.getElementById("pro")
+        
+        datas.forEach(items => {
+
+            const box = document.createElement("div")
+      //console.log(items.images);
+      
+            box.innerHTML = `<img src=${items.images}/>   <h2>${items.id} . ${items.title}</h2>`
+            container.appendChild(box)
+        });
+    }catch(err){
+
+        console.error('Somethng error',err);
+        
+
+    }finally{
+        console.log('process compelted');
+        
+    }
+
+} 
+
+
+getdata()
+
+</script>
+
+</body>
+</html>
