@@ -1,0 +1,163 @@
+JS
+
+Single theard process - 
+intrepretor language - line by line excusion 
+
+declaration 
+
+variable keyword variable name;
+
+It return undefind value
+
+- init 
+
+variable keyword varable name = data(datatype)
+Primitive and non primitive 
+
+Hosting
+
+when you init value. then you access that value before the init. the java script excecution time 
+take your variable decalaration part only move to the top of their scope 
+
+
+{
+	
+Gobal scope
+block scope
+functional scope
+
+}
+
+
+console.log(a)
+let a = 10
+TDZ
+
+Let const Var
+
+var,let,const globle delar - where ever you want you can use it.
+var - declare - init - redeclare - re assign
+let - declare - init - Can't do redeclare - re assign
+const - init
+
+
+truth values and fales values 
+ true
+ []
+ {}
+ 253
+ "sdfsfd"
+
+ falsy values
+ false
+ ""
+ 0
+
+
+NaN
+
+
+Null - undefind 
+data type - 
+
+ES6+ - es16 - 2025
+
+let/const 
+Function expressions / arrow function
+const datas = ()=>{
+	
+}
+
+const datas = function(){
+	
+}
+
+function datas (){
+	
+}
+
+
+
+Template literals
+console.log(``)
+Destucturing
+array
+object
+
+for in  & for of 
+
+optinal cheaning ?
+
+nullesh colusionas ??
+
+spread opeartor
+Spread and unpacked your elements and concotinate your arrays 
+rest operaor
+
+Defalute parametter
+modules - import export
+Async and await
+
+
+Async and await
+Objects and array of objects
+functions
+array methods 
+
+
+React
+Intro setup     -  babel compiler , what is React - CRA Project - 3 - webpack / Vite Project  - 
+
+npx whats -node package execute 
+npm whats - node package manager - 
+
+CRA commend - npx create-react-app appname     - host - post number 3000
+Vite comment - npm create vite@latest appname  - host - port number 5173
+
+Do some procudue - remove all form app.css and index.css
+and app.jsx
+
+then move to main.jsx
+
+
+entry point - component to added in your main.jsx file 
+
+import & export
+
+Create Phase    - rafc - reactarrowfunctioncomponent
+Component creation - file handling - js es6+ feru
+multi components adding - Each files need to add tailwindcss or css
+
+adding - add your component into another component
+
+Images
+
+
+Update Phase    -   Events, hooks, Es6+ , Array methods, form handling
+  
+optimise Phase  -   lazy loading , redex, advanced hooks , custom hooks
+
+
+Node
+Project setup and file setup
+import & export
+Server setup
+3rd party libraries - express , mongoose , cors, dotenv, multer, jwt
+request & response - Postman
+Setting the api and route and controller files like MVC
+
+
+
+
+Interact with React
+CURD - LOGIN image uploading 
+ORM - database handling Mongo db
+
+
+
+
+
+
+
+
+

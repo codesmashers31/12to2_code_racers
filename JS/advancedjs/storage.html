@@ -1,0 +1,54 @@
+<form id="myform">
+    <input type="email" id="username">
+    <input type="password" id="password">
+    <input type="submit">
+</form>
+
+
+
+
+<script>
+
+
+     const formdatas = document.getElementById("myform")
+
+     formdatas.addEventListener("submit",(e)=>{
+
+   e.preventDefault()
+        const usename = document.getElementById("username").value
+        const password = document.getElementById("password").value
+     
+        const issues_Data = {email:usename,password:password}
+       
+        const datass = localStorage.getItem("datas")
+
+        const changedata = JSON.parse(datass)
+
+        console.log('datas',changedata);
+        
+
+        const users = changedata || []
+
+        console.log('users',users);
+        
+
+        users.push(issues_Data)
+
+        const changeToJsonString = JSON.stringify(users)
+        const store = localStorage.setItem("datas",changeToJsonString)
+
+        alert('Datas doen')
+
+     })
+
+    
+
+     
+    
+
+    
+    
+   
+     
+
+</script>
