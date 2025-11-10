@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Using</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    
+<div class="container bg-dark text-white p-3">
+
+    <h1 class="text-center">This is Datas</h1>
+
+    <div class="row bg-warning  mainbox">
+        <div class="col-4 col-sm-6 col-lg-8 bg-danger">
+        <h1>Box 1</h1>
+        </div>
+        <div class="col-8 col-sm-6 col-lg-4 bg-success">
+<h1>Box 2</h1>
+        </div>
+        
+
+    </div>
+
+</div>
+
+
+<div class="bg-danger text-white p-5 mt-3 d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column gap-3 justify-content-center align-items-center p-3">
+        <h1>Welcome to Educcation System</h1>
+        <p>Build Your Education  system Very Strong</p>
+    </div>
+</div>
+
+
+<div class="d-flex bg-dark  p-5 mt-3 gap-3">
+    <div class="w-50 h-50 p-5 bg-white rounded">
+Box 1
+    </div>
+    <div class="w-50 h-50 p-5 bg-white rounded">
+Box 2
+    </div>
+    <div class="w-50 h-50 p-5 bg-white rounded">
+Box 3
+    </div>
+</div>
+
+
+
+<script>
+    const outer = ()=>{
+        let a = 10;
+      console.log('See data',a);
+      
+        const inner = ()=>{
+            a++
+      console.log('Updated data',a);
+
+        }
+
+        inner()
+         inner()
+    }
+
+
+    outer()
+  
+</script>
+
+
+</body>
+</html>
