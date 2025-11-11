@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports of Chennai Survival</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #f39c12;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--light) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 82, 118, 0.85), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 10px 25px;
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+        }
+        
+        .card-job {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        
+        .card-job:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-job.delivery {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        
+        .card-job.physical {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        .card-job.online {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+        
+        .safety-section {
+            background-color: var(--light);
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--secondary);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .stats-section {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .modal-content {
+            border-radius: 10px;
+            border: none;
+        }
+        
+        .modal-header {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-chart-line me-2"></i>Chennai Survival Reports
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <button class="btn btn-outline-light">Login</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Voice of Chennai Struggles</h1>
+                    <p class="lead mb-4">This platform collects data to help job seekers find the best opportunities in Chennai. Share your experiences to help others make informed career decisions.</p>
+                    <button class="btn btn-primary-custom btn-lg">Support Your Voice</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <p class="stat-number">1,250+</p>
+                    <p class="stat-label">Reports Collected</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <p class="stat-number">850+</p>
+                    <p class="stat-label">Job Seekers Helped</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <p class="stat-number">95%</p>
+                    <p class="stat-label">Satisfaction Rate</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="stat-number">12+</p>
+                    <p class="stat-label">Job Categories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Choose Your Job Category</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card card-job delivery text-white p-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-motorcycle feature-icon"></i>
+                            <h3 class="card-title">Delivery Jobs</h3>
+                            <p class="card-text">Rate delivery jobs based on pay, working conditions, and flexibility.</p>
+                            <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#ratingModal">Rate Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-job physical text-white p-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-dumbbell feature-icon"></i>
+                            <h3 class="card-title">Part-time Physical Jobs</h3>
+                            <p class="card-text">Share your experience with part-time physical labor positions.</p>
+                            <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#ratingModal">Rate Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-job online text-white p-4">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop feature-icon"></i>
+                            <h3 class="card-title">Online & Own Jobs</h3>
+                            <p class="card-text">Evaluate online work opportunities and self-employment options.</p>
+                            <button type="button" class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#ratingModal">Rate Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section class="safety-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title text-start">Safety & Health Concerns</h2>
+                    <p class="mb-4">Record issues like long working hours, night shifts, or accidents to help improve working conditions for everyone.</p>
+                    <p>Your anonymous reports help us identify problematic employers and advocate for better workplace safety standards across Chennai.</p>
+                    <button class="btn btn-primary-custom">Explore More</button>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded shadow" alt="Workplace Safety">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">How It Works</h2>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h4>1. Submit Report</h4>
+                    <p>Share your job experience anonymously through our secure form.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h4>2. Data Analysis</h4>
+                    <p>We analyze reports to identify trends and problematic employers.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>3. Create Change</h4>
+                    <p>Use our data to make informed decisions and advocate for better conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Modal -->
+    <div class="modal fade" id="ratingModal" tabindex="-1" aria-labelledby="ratingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ratingModalLabel">Rate Your Job Experience</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="jobType" class="form-label">Job Type</label>
+                            <select class="form-select" id="jobType">
+                                <option selected>Select job category</option>
+                                <option value="delivery">Delivery Jobs</option>
+                                <option value="physical">Part-time Physical Jobs</option>
+                                <option value="online">Online & Own Jobs</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="rating" class="form-label">Overall Rating</label>
+                            <div class="d-flex justify-content-between mb-2">
+                                <small>Poor</small>
+                                <small>Excellent</small>
+                            </div>
+                            <input type="range" class="form-range" min="1" max="5" id="rating">
+                        </div>
+                        <div class="mb-3">
+                            <label for="comments" class="form-label">Your Experience</label>
+                            <textarea class="form-control" id="comments" rows="3" placeholder="Share details about pay, working conditions, management, etc."></textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="anonymous">
+                            <label class="form-check-label" for="anonymous">
+                                Submit anonymously
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary-custom">Submit Rating</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Chennai Survival Reports</h5>
+                    <p>Helping job seekers make informed decisions by collecting and sharing anonymous job experience reports.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Reports</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Details</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="mb-3">Job Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Delivery Jobs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Part-time Physical Jobs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Online & Own Jobs</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">View All Categories</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@chennaisurvival.org</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+91 98765 43210</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Chennai, Tamil Nadu</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Chennai Survival Reports. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
